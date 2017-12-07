@@ -58,7 +58,9 @@ function total() {
 }
 
 function removeFromCart(item) {
+   console.log(cart.hasOwnProperty(item))
    if(cart.hasOwnProperty(item)){
+      console.log("hasItem");
       delete cart[item];
       return cart;
    } else {
