@@ -61,7 +61,8 @@ function removeFromCart(item) {
    console.log(`${cart.hasOwnProperty(item)}`);
    for(var i = 0; i <= cart.length - 1; i++){
       console.log(`${Object.keys(cart[i])}  ${item}`)
-      var key = Object.keys(cart[i]);
+
+      console.log(`${cart.hasOwnProperty(Object.keys(cart[i]))}`);
      if(key === item){
        console.log("hasItem");
        delete cart[i];
