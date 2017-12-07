@@ -58,16 +58,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-   console.log(`${cart.hasOwnProperty(item)}`);
    for(var i = 0; i <= cart.length - 1; i++){
-      console.log(`${Object.keys(cart[i])}  ${item}`)
-      var key = Object.keys(cart[i]);
-      console.log(`${cart.hasOwnProperty(key)}`);
-     if(key === item){
-       console.log("hasItem");
-       delete cart[i];
-       return cart;
-     }
+    if(cart[i].hasOwnProperty(item)){
+      console.log(`Inside if; deleting ${item}`);
+      cart.splice(i,1);
+      return cart;
+    }
    }
    console.log("That item is not in your cart.");
 }
